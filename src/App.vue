@@ -1,7 +1,11 @@
 <template>
-    <div>vue3-basic-template</div>
+    <div>
+        <ChatRoom />
+    </div>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import ChatRoom from '@/components/ChatRoom.vue'
+</script>
 
 <style scoped></style>
