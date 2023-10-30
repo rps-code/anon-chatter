@@ -3,10 +3,11 @@
     <button @click="sendMessage">Send Message</button>
 </template>
 
-<script setup>
+<script setup lang="ts">
     import { ref, onMounted, onUnmounted, inject } from 'vue'
+    import { Socket } from 'socket.io-client'
 
-    const socket = inject('$socket')
+    const socket = inject('$socket') as unknown as Socket
     const connected = ref(false)
 
     onMounted(() => {
