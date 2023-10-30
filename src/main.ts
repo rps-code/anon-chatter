@@ -1,11 +1,11 @@
 import './assets/main.css'
 
 import { createApp } from 'vue'
-import { createPinia } from 'pinia'
 import App from './App.vue'
+import { io } from 'socket.io-client'
 
 const app = createApp(App)
+const socket = io('http://localhost:3000')
 
-app.use(createPinia())
-
+app.provide('$socket', socket)
 app.mount('#app')
